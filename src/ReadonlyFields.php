@@ -13,10 +13,7 @@ use QD\readonly\fields\StringField;
 use craft\base\Plugin;
 use craft\events\RegisterComponentTypesEvent;
 use craft\services\Fields;
-use QD\readonly\fields\EntriesField;
 use QD\readonly\fields\HiddenField;
-use QD\readonly\fields\ImagesField;
-use QD\readonly\fields\TableField;
 use QD\readonly\plugin\Services;
 use yii\base\Event;
 
@@ -60,9 +57,6 @@ class ReadonlyFields extends Plugin
     Event::on(Fields::class, Fields::EVENT_REGISTER_FIELD_TYPES, function (RegisterComponentTypesEvent $event) {
       $event->types[] = StringField::class;
       $event->types[] = HiddenField::class;
-      // $event->types[] = TableField::class;
-      // $event->types[] = EntriesField::class;
-      // $event->types[] = ImagesField::class;
     });
   }
 }

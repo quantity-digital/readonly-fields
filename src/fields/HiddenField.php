@@ -231,7 +231,7 @@ class HiddenField extends Field implements PreviewableFieldInterface, SortableFi
   /**
    * @inheritdoc
    */
-  protected function inputHtml(mixed $value, ?ElementInterface $element = null): string
+  protected function inputHtml(mixed $value, ?ElementInterface $element = null, bool $inline = false): string
   {
     $namespaceInputId = Craft::$app->getView()->namespaceInputId($this->handle);
 
